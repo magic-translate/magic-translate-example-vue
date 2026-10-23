@@ -1,0 +1,50 @@
+<script setup lang="ts">
+const links = [
+  {
+    href: 'https://magictranslate.io/docs/vue',
+    title: 'Docs',
+    description: 'Find out how to get started and read about features and the API',
+  },
+  {
+    href: 'https://magictranslate.io',
+    title: 'Sign up',
+    description: 'Check out the official Magic Translate website to create an account',
+  },
+  {
+    href: 'https://magictranslate.io/pricing',
+    title: 'Pricing',
+    description: 'Learn about the available packages and their cost',
+  },
+  {
+    href: 'https://github.com/magic-translate',
+    title: 'Examples',
+    description: 'Find Magic Translate code examples on GitHub',
+  },
+];
+</script>
+
+<template>
+  <div class="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+    <a
+      v-for="link in links"
+      :key="link.href"
+      :href="link.href"
+      class="flex flex-col items-center lg:items-stretch group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 dark:hover:border-neutral-700 dark:hover:bg-neutral-800/30"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <h2 class="mb-3 text-2xl font-semibold">
+        <T>{{ link.title }}</T>
+        {{ ' ' }}
+        <span
+          class="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none"
+        >
+          -&gt;
+        </span>
+      </h2>
+      <p class="m-0 max-w-[30ch] text-sm opacity-50">
+        <T>{{ link.description }}</T>
+      </p>
+    </a>
+  </div>
+</template>
