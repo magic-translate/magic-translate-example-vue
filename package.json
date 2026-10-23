@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@magic-translate/vue": "^0.0.1",
+    "@magic-translate/vue": "^1.0.1",
     "vue": "^3.5.44"
   },
   "devDependencies": {
